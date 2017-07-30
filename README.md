@@ -1,8 +1,8 @@
 # strava-tools
 
-A collection of simple command line tools for manipulating data on [http://strava.com/]Strava.
+A collection of simple command line tools for manipulating data on [Strava](http://strava.com/).
 
-The tools make use of the [https://github.com/hozn/stravalib.git/]stravalib and Flask Python modules:
+The tools make use of the [stravalib](https://github.com/hozn/stravalib.git/) and [Flask](http://flask.pocoo.org/) Python modules:
 
 To setup your environment:
 
