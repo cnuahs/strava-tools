@@ -1,4 +1,4 @@
-# strava-tools.git
+# strava-tools
 
 A collection of simple command line tools for manipulating data on [http://strava.com/]Strava.
 
