@@ -41,7 +41,7 @@ You're now all set with read access to your profile and activities on Strava.
 To obtain an access token with write permissions, call strava-tools.py as follows:
 
 ```bash
-(env) $ ./strava-tools.py --authorize [--port <port>]
+(env) $ ./strava-tools.py auth [--port <port>]
 ```
 
 This will open a browser window for you to enter your credentials at Strava.com, and will retrieve your access token. You need to add this token (copy and paste it from your browser) to config.py either in place of or in addition to the read only token you added above.
@@ -51,7 +51,19 @@ If you need to navigate a firewall or proxy, you can specify the local port to l
 You can perform operation of your strava activities using strava-tools.py as follows:
 
 ```bash
-(env) $ ./strava-tools.py --user <name>
+(env) $ ./strava-tools.py action [--user <name>]
 ```
 
-where <name> is a key from the Python dictionary 'users' defined in config.py.
+where action is the action to perform and the optional argument <name> is a key from the Python dictionary 'users' defined in config.py.
+
+For help, including a list of available actions, type:
+
+```bash
+(env) $ ./strava-tools.py -h
+```
+
+For action specific help, type:
+
+```bash
+(env) $ ./strava-tools.py action -h
+```
