@@ -54,7 +54,7 @@ You can perform operation of your strava activities using strava-tools.py as fol
 (env) $ ./strava-tools.py action [--user <name>]
 ```
 
-where action is the action to perform and the optional argument <name> is a key from the Python dictionary 'users' defined in config.py.
+where `action` is the action to perform and the optional argument `<name>` is a key from the Python dictionary 'users' defined in config.py (see above; `<name>` defaults to the login name of the current user).
 
 For help, including a list of available actions, type:
 
