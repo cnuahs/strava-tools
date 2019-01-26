@@ -13,6 +13,7 @@ $ source env/bin/activate
 (env) $ cd ./stravalib
 (env) $ python setup.py develop
 (env) $ pip install flask
+(env) $ pip install geographiclib
 ```
 
 You also need to create/register and authorize a Strava App to use the Strava API. To do so:
