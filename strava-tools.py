@@ -37,15 +37,20 @@ def auth(client_id,client_secret,port):
 def gearCmd(client,args):
     # tag activities with specified gearId
 
-    # TODO: if gearId == None, list all gear Ids (for the selected activities?)
-    #       with their description (shaun)
+    id = getattr(args,'gearId');
+    if id is None:
+        # list all bikes
+        athlete = client.get_athlete();
+        for id in athlete.bikes:
+            logging.info("Bike: %s (%s) %ikm",id.name,id.id,id.distance/1e3);
+        return
 
     cnt = [0,0];
     for activity in client.get_activities(after = getattr(args,'after'),
         before = getattr(args,'before')):
         if activity.gear_id is None:
             if not getattr(args,'dryrun'):
-                client.update_activity(activity_id = activity.id,gear_id = getattr(args,'gearId'));
+                client.update_activity(activity_id = activity.id,gear_id = id);
                 dt = random.expovariate(1.0/1.5); # rate limiting...
                 logging.info("Sleeping %fs", dt);
                 time.sleep(dt);
